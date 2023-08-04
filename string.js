@@ -2,4 +2,4 @@
 const email = "info@currenttick.com";
 // let domain = email.substring(email.indexOf("@") - 1);
 
-console.log(email.slice(0, 3));
+console.log("info@currenttick.comazizbjhbjb".length);
