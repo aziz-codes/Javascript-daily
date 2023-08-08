@@ -10,3 +10,24 @@
   border: 1px solid skyblue;
   margin: 0 auto;
 }
+.wrapper {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .circle {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: red;
+}
+.circle::after {
+  content: "";
+  background-color: blue;
+}
+#btn::after {
+  background-color: red;
+}
