@@ -31,7 +31,7 @@
 
 .animated-div::before,
 .animated-div::after {
-  content: "";
+  content: "hello world";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -57,4 +57,65 @@
 
 .animated-div:hover::after {
   transform: translateY(-100%);
+}
+.my-div {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background-color: red;
+}
+
+.my-div::before,
+.my-div::after {
+  content: "";
+  position: absolute;
+  height: 120px;
+  width: 120px;
+  background-color: blue;
+  opacity: 0.1;
+}
+.my-div::after {
+  z-index: 999;
+  opacity: 1;
+  transition: animate 0.4s linear ease-in-out infinite;
+}
+.my-div::before {
+  z-index: 9999;
+  opacity: 0.2;
+  transition: animate 0.4s linear ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.div {
+  height: 100px;
+  width: 100px;
+  background-color: red;
+  animation: animate 2s infinite linear;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
