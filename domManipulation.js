@@ -5,3 +5,15 @@ btnEl.addEventListener("click", () => {
   btnEl.outerHTML = "hello";
 });
 // test commit
+const btnCheckEl = document.getElementById("btnCheck");
+
+btnCheckEl.addEventListener("click", function () {
+  console.log(this);
+});
+
+passwordEl.addEventListener("keyup", () => {
+  let password = passwordEl.value;
+  password.length > 3
+    ? (btnCheckEl.style.display = "block")
+    : (btnCheckEl.innerText = "wrong");
+});
