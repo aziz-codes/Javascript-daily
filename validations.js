@@ -6,3 +6,4 @@ const btnSubmit = document.getElementById("btnSubmit");
 btnSubmit.addEventListener("click", () => {
   console.log(textEl.value);
 });
+// test commit
