@@ -27,8 +27,8 @@
     <br />
     <br />
     <input type="text" placeholder="Enter name" id="textEl" />
-    <button id="btnSubmit">Submit</button>
-    <button id="btnSubmit">this wont changed</button>
+    <button class="btnSubmit">Submit</button>
+    <button class="btnSubmit">this wont changed</button>
     <button id="btnBackspace"><--</button>
     <!-- <script src="./objects.js"></script> -->
     <!-- <script src="./domManipulation.js"></script> -->
@@ -38,12 +38,14 @@
     <!-- <script src="./validations.js"></script> -->
     <script>
       let btnRemove = document.getElementById("btnBackspace");
-      let btnSubmit = document.querySelector("#btnSubmit");
+      const btnSubmit = document.querySelectorAll(".btnSubmit");
 
       btnRemove.addEventListener("click", () => {
         // let textEl = document.getElementById("textEl");
         // textEl.value = textEl.value.slice(0, -1);
-        btnSubmit.textContent = "Hello World";
+        btnSubmit.forEach((element) => {
+          element.textContent = "Hello";
+        });
       });
     </script>
   </body>
