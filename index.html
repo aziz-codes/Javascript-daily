@@ -6,7 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body>
+  <body style="padding: 20px">
     <!-- <input type="password" placeholder="enter password" id="password" />
     <button id="btn">show password</button> -->
     <!-- <div class="slider">
@@ -28,11 +28,30 @@
     <br />
     <input type="text" placeholder="Enter name" id="textEl" />
     <button id="btnSubmit">Submit</button>
+    <button id="btnBackspace"><--</button>
     <!-- <script src="./objects.js"></script> -->
     <!-- <script src="./domManipulation.js"></script> -->
     <!-- <script src="./array.js"></script> -->
     <!-- <script src="./windowObj.js"></script> -->
     <script src="./app.js"></script>
-    <script src="./validations.js"></script>
+    <!-- <script src="./validations.js"></script> -->
+    <script>
+      let btnRemove = document.getElementById("btnBackspace");
+
+      btnRemove.addEventListener("click", () => {
+        let textEl = document.getElementById("textEl");
+        // console.log(newText);
+        // let st = textEl.value.split("").pop();
+
+        // let name = textEl.value;clg
+
+        // textEl.value = name.slice(-1);
+        // console.log(name.slice(-1));
+
+        let name = "aziz";
+        // name.slice(-1);
+        textEl.value = textEl.value.slice(0, -1);
+      });
+    </script>
   </body>
 </html>
