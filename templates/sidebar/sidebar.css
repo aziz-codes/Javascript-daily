@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.wrapper {
+  height: auto;
+  width: 100%;
+  display: flex;
+}
+.sidebar {
+  position: relative;
+  width: 200px;
+  background-color: white;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  border: 1px solid wheat;
+  /* transform: translateX(100%); */
+  transition: all 0.2s ease-in linear;
+}
+.sidebar .header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.sidebar .header img {
+  height: 50px;
+  width: 50px;
+  object-position: center;
+  object-fit: cover;
+}
+.sidebar .header span {
+  font-weight: 900;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+  box-shadow: 10px 20px 30px rgb(243, 236, 236);
+}
+.navigation-section {
+  margin-top: 20px;
+  width: 100%;
+}
+.navigation-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.navigation-section ul li {
+  height: 30px;
+  width: 80%;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  padding: 2px 4px;
+}
+.navigation-section ul li:hover {
+  background-color: beige;
+  text-align: center;
+  transition: 0.2s ease-in;
+}
+.main-section {
+  margin-left: 200px;
+  width: 100%;
+}
+.main-section .navbar {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+}
+.hamburger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5px;
+  cursor: pointer;
+}
+.hamburger-menu .line {
+  height: 2px;
+  background-color: black;
+  width: 15px;
+  cursor: pointer;
+}
+.close-sidebar {
+  transform: translateX(-100%);
+  transition: all 0.2s linear;
+}
+.open-sidebar {
+  transform: translateX(0);
+  transition: all 0.2s linear;
+}
