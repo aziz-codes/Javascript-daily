@@ -13,7 +13,6 @@ menuIcon.addEventListener("click", () => {
   let attr = sidebar.getAttribute("isopen");
   if (attr === "true") {
     sidebar.setAttribute("isopen", "false");
-    mainSection.classList.add("move-main");
     sidebar.classList.add("close-sidebar");
     sidebar.classList.remove("open-sidebar");
   } else {
@@ -30,7 +29,6 @@ menuIcon.addEventListener("click", () => {
   //     sidebar.setAttribute("isopen", true);
   //   }
   // sidebar.classList.toggle("close-sidebar");
-
   // console.log(isOpen);
   //   if (isOpen) {
   //     //    close the sidebar if it is open
