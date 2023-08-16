@@ -15,10 +15,12 @@ menuIcon.addEventListener("click", () => {
     sidebar.setAttribute("isopen", "false");
     sidebar.classList.add("close-sidebar");
     sidebar.classList.remove("open-sidebar");
+    mainSection.style.marginLeft = "-2px";
   } else {
     sidebar.classList.remove("close-sidebar");
     sidebar.classList.add("open-sidebar");
     sidebar.setAttribute("isopen", "true");
+    mainSection.style.marginLeft = "200px";
   }
   // console.log(!check);
   // let isOpen = sidebar.getAttribute("isopen");
