@@ -2,6 +2,17 @@ const menuIcon = document.getElementById("hamburger-menu");
 const sidebar = document.querySelector(".sidebar");
 const mainSection = document.querySelector(".main-section");
 let check = true;
+window.addEventListener("resize", () => {
+  if (window.innerWidth <= 768) {
+    sidebar.classList.remove("open-sidebar");
+    sidebar.classList.add("close-sidebar");
+    mainSection.style.marginLeft = "-2px";
+  } else {
+    sidebar.classList.remove("close-sidebar");
+    sidebar.classList.add("open-sidebar");
+    mainSection.style.marginLeft = "200px";
+  }
+});
 menuIcon.addEventListener("click", () => {
   // if (sidebar.getAttribute("isopen", true)) {
   //   sidebar.setAttribute("isopen", false);
