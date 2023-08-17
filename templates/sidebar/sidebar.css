@@ -98,3 +98,11 @@
   transform: translateX(0);
   transition: all 0.2s linear;
 }
+@media (max-width: 600px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+  }
+}
