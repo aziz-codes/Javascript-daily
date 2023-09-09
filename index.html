@@ -30,6 +30,7 @@
     <button class="btnSubmit">Submit</button>
     <button class="btnSubmit">this wont changed</button>
     <button id="btnBackspace"><--</button>
+    <video id="video" autoplay></video>
     <!-- <script src="./objects.js"></script> -->
     <!-- <script src="./domManipulation.js"></script> -->
     <!-- <script src="./array.js"></script> -->
@@ -47,6 +48,20 @@
           element.textContent = "Hello";
         });
       });
+
+      // video script
+
+      const videoEl = document.getElementById("video");
+      navigator.mediaDevices
+        .getUserMedia({
+          video: true,
+        })
+        .then((stream) => {
+          videoEl.srcObject = stream;
+        })
+        .catch((err) => {
+          console.log("error accessing camera", err);
+        });
     </script>
   </body>
 </html>
