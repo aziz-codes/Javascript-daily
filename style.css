@@ -119,10 +119,23 @@
     opacity: 1;
   }
 }
-.emailField {
+.items {
   margin: 20px 5px;
   padding: 2px 2px;
   outline: none;
   border: 1px solid rgb(161, 157, 157);
   border-radius: 4px;
+}
+.tags-wrapper {
+  width: auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+}
+.tags {
+  padding: 6px 2px;
+  text-align: center;
+  background-color: gray;
+  border-radius: 5px;
 }

@@ -30,7 +30,8 @@
     <button class="btnSubmit">Submit</button>
     <button class="btnSubmit">this wont changed</button>
     <button id="btnBackspace"><--</button>
-    <input type="text" placeholder="enter email" class="emailField" />
+    <input type="text" placeholder="tags per space" class="items" id="tagsEl" />
+    <div class="tags-wrapper" id="tags-div"></div>
     <!-- <video
       id="video"
       autoplay
@@ -68,6 +69,26 @@
       //   .catch((err) => {
       //     console.log("error accessing camera", err);
       //   });
+      const items = document.getElementById("tagsEl");
+      const tagsEl = document.getElementById("tags-div");
+      let tags = [];
+      items.addEventListener("keyup", (e) => {
+        if (e.key === " ") {
+          tags.push(items.value);
+          // tagsEl.innerHTML = tags.map((item) => {
+          //   `<div class="tags">${item}</div>`;
+          // });
+          let sec = "";
+          for (let i in tags) {
+            sec += `<div class="tags">${tags[i]}</div>`;
+          }
+          tagsEl.innerHTML = sec;
+          items.value = "";
+        }
+      });
+
+      //  let sec = '';
+      //  sec+=tag.map((item)=>)
     </script>
   </body>
 </html>
