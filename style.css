@@ -139,3 +139,16 @@
   background-color: gray;
   border-radius: 5px;
 }
+.animation-text {
+  margin: 20px 10px;
+  width: 30ch;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: type 2s steps(22);
+}
+
+@keyframes type {
+  from {
+    width: 0;
+  }
+}
