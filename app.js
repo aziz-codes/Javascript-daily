@@ -11,3 +11,6 @@
 
 let Name = "01Aziz";
 console.log(Name.slice(2));
+
+const positionEl = document.getElementById("position");
+console.log(positionEl.clientLeft);
