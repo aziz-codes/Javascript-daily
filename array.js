@@ -9,5 +9,5 @@
 // }
 // console.log(obj);
 
-const obj = { apple: 3, pear: 5 };
-console.log(obj);
+const array = [2, 3, 4, 5];
+console.log(array.reduce((acc, el) => acc + el));
