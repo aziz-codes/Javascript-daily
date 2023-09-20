@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dice</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: row;
+        gap: 10px;
+      }
+      .dice {
+        height: 40px;
+        width: 40px;
+        padding: 7px 7px;
+        border-radius: 10px;
+        transition: 0.5s linear;
+      }
+      input[type="text"] {
+        outline: none;
+        padding: 4px 2px;
+      }
+      .items {
+        height: auto;
+        overflow-y: auto;
+        width: 50px;
+        padding: 5px 2px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        border: 1px solid black;
+        max-height: 120px;
+      }
+      .btnItem {
+        height: 30px;
+        width: 40px;
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar {
+        width: 5px !important;
+        background-color: gray;
+        height: 5px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; gap: 5px">
+      <input type="text" placeholder="place your bet" />
+      <button class="dice" id="dice">3</button>
+    </div>
+    <div class="items"></div>
+    <script type="text/javascript" charset="UTF-8">
+      const diceEl = document.getElementById("dice");
+      const itemsEl = document.querySelector(".items");
+      let items = [];
+      diceEl.addEventListener("click", () => {
+        let count = 0;
+        const timer = setInterval(() => {
+          diceEl.disabled = true;
+          count++;
+          let random = Math.ceil(Math.random() * 6);
+          diceEl.textContent = random;
+
+          if (count === 10) {
+            clearInterval(timer);
+            diceEl.disabled = false;
+            items.push(random);
+            setItems(items);
+          }
+        }, 100);
+      });
+      function setItems(items) {
+        let content = "";
+
+        for (let i = 0; i < items.length; i++) {
+          content += `<button class="btnItem">${items[i]}</button>`;
+        }
+        itemsEl.innerHTML = content;
+      }
+    </script>
+  </body>
+</html>
