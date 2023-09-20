@@ -8,6 +8,21 @@
 //   }
 // }
 // console.log(obj);
-
-const array = [2, 3, 4, 5];
-console.log(array.reduce((acc, el) => acc + el));
+const products = [
+  {
+    item: "watch",
+    price: 45,
+  },
+  {
+    item: "usb",
+    price: 50,
+  },
+  {
+    item: "usb cable",
+    price: 32,
+  },
+];
+let sum = products.reduce((acc, el) => {
+  return (acc += el.price);
+}, 0);
+console.log(sum);
