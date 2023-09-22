@@ -21,3 +21,6 @@ const email = "info@currenttick.com";
 //   }
 // }
 // console.log(obj);
+
+let randomString = Math.random().toString(30).slice(2);
+console.log(randomString);
