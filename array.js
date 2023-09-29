@@ -38,3 +38,7 @@ let max = arr.reduce((acc, el) => {
 let nums = [4, 2, 5, 7, 9, 1];
 const maxNum = Math.max.apply(null, nums);
 console.log(maxNum);
+print(2 + 3);
+function print(text) {
+  console.log(text);
+}
