@@ -9,8 +9,13 @@
 // };
 // console.log(minifier(1250984));
 
-let Name = "01Aziz";
-console.log(Name.slice(2));
+// let Name = "01Aziz";
+// console.log(Name.slice(2));
 
-const positionEl = document.getElementById("position");
-console.log(positionEl.clientLeft);
+// const positionEl = document.getElementById("position");
+// console.log(positionEl.clientLeft);
+// const rand = Math.random().toString(36).slice(2).toUpperCase();
+const rand = Math.ceil(Math.random() * 999999)
+  .toString(36)
+  .slice(2);
+console.log(rand);
