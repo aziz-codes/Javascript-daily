@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setting HTML using JS</title>
+    <style type="text/css">
+      .container {
+        position: relative;
+        margin: 20px 40px;
+        height: 400px;
+        width: 600px;
+        background-color: skyblue;
+      }
+      .container2 {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <div class="container"></div>
+  <body>
+    <script type="text/javascript">
+      let container = document.querySelector(".container");
+      let newDiv = document.createElement("div");
+      newDiv.classList.add("container2");
+      let text = document.createElement("p");
+      text.textContent = "This is subChild el";
+      newDiv.appendChild(text);
+      container.appendChild(newDiv);
+    </script>
+  </body>
+</html>
