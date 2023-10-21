@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        height: 200px;
+        width: 400px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-2">This will hold some content</div>
+    </div>
+    <div class="hiddenContainer">
+      This content will replace the child container and will append itself
+      inside the parent container.
+      <p id="data-p">Some data</p>
+    </div>
+    <script>
+      const container = document.querySelector(".container");
+      let con = document.querySelector(".hiddenContainer");
+      let con2 = document.querySelector(".container-2");
+      let pTag = document.getElementById("data-p");
+      container.innerHTML = con.innerHTML;
+    </script>
+  </body>
+</html>
