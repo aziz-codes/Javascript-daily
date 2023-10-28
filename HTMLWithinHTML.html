@@ -10,6 +10,9 @@
         width: 400px;
         background-color: red;
       }
+      .hideEl {
+        display: none;
+      }
     </style>
   </head>
   <body>
@@ -19,14 +22,22 @@
     <div class="hiddenContainer">
       This content will replace the child container and will append itself
       inside the parent container.
-      <p id="data-p">Some data</p>
     </div>
+    <p id="data-p">Some data</p>
+    <button id="btnHide">HIde</button>
     <script>
       const container = document.querySelector(".container");
       let con = document.querySelector(".hiddenContainer");
       let con2 = document.querySelector(".container-2");
       let pTag = document.getElementById("data-p");
+      let btnHide = document.getElementById("btnHide");
+      btnHide.addEventListener("click", hide(con, pTag, btnHide));
       container.innerHTML = con.innerHTML;
+      function hide(...els) {
+        els.forEach((el) => {
+          el.style.display = "none";
+        });
+      }
     </script>
   </body>
 </html>
