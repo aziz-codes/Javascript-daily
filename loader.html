@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        height: 2000px; /* Add enough content to enable scrolling */
+      }
+
+      #progress-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 3px;
+        background-color: #0077ff;
+        z-index: 999;
+        transition: width 0.3s ease; /* Add a smooth transition effect */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="progress-bar"></div>
+    <script>
+      const progressBar = document.getElementById("progress-bar");
+
+      window.addEventListener("scroll", function () {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        const totalHeight = document.body.clientHeight - window.innerHeight;
+        const scrollPercentage = (scrollTop / totalHeight) * 100;
+
+        progressBar.style.width = scrollPercentage + "%";
+      });
+    </script>
+  </body>
+</html>
