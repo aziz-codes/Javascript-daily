@@ -12,4 +12,24 @@ function countCHars(arr){
   return obj
 }
 
-console.log(countCHars([1,2,1,2,2,2,2,2,3,3,4,4,7]))
+// console.log(countCHars([1,2,1,2,2,2,2,2,3,3,4,4,7]))
+
+
+function isPalindrome(str) {
+    //using array notation
+  let reversedStr = str.split('').reverse().join('');
+  return str === reversedStr;
+}
+
+console.log(isPalindrome('recer'));
+
+function isPalindrome2(str) {
+    for (let i = 0; i < Math.floor(str.length / 2); i++) {
+        if (str[i] !== str[str.length - 1 - i]) {
+            return false; //return false on first mismatch
+        }
+    }
+    return true; // Return true if no mismatches are found
+}
+
+console.log(isPalindrome2('deda'));
