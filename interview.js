@@ -55,3 +55,22 @@ function largeWord(sentance){
 }
 
 console.log(largeWord("Hello JavaScript"));
+
+
+function sameFrequency(arr1,arr2){
+  // check if one array contains each value squared in the other array, 
+  if(arr1.length!==arr2.length) return;
+
+  for(let i=0;i<arr1.length;i++){
+    if(arr2[i] !== Math.pow(arr1[i],2)) return false;
+   
+  }
+  return true;
+  
+}
+
+
+const arr1=[1,2,3];
+const arr2=[1,4,9]
+
+console.log(sameFrequency(arr1,arr2))
