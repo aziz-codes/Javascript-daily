@@ -33,3 +33,13 @@ function isPalindrome2(str) {
 }
 
 console.log(isPalindrome2('deda'));
+
+
+// return max value from nested array
+function maxValue (arr){
+    return arr.flat(Infinity).reduce((acc,el)=>{
+      return Math.max(acc,el) 
+    },0)
+}
+
+console.log(maxValue([2, 3, 4,[36,7,8,[9,5,0]]]));;
