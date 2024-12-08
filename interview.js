@@ -43,3 +43,15 @@ function maxValue (arr){
 }
 
 console.log(maxValue([2, 3, 4,[36,7,8,[9,5,0]]]));;
+
+
+function largeWord(sentance){
+  return sentance.split(" ").reduce((acc,el)=>{
+     if(acc.length>el.length){
+       return acc
+     }
+     else return el;
+  },"")
+}
+
+console.log(largeWord("Hello JavaScript"));
