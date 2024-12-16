@@ -74,3 +74,26 @@ const arr1=[1,2,3];
 const arr2=[1,4,9]
 
 console.log(sameFrequency(arr1,arr2))
+
+
+
+function generateCombinations(number) {
+  const numStr = number.toString();
+  const length = numStr.length;
+  const combinations = [];
+
+  // Function to generate combinations recursively
+  function generate(current, index) {
+    if (current.length > 0) {
+      combinations.push(current);
+    }
+    for (let i = index; i < length; i++) {
+      generate(current + numStr[i], i + 1);
+    }
+  }
+
+  generate("", 0); // Start with an empty string and index 0
+  return combinations;
+}
+const result = generateCombinations(123);
+console.log(result);
